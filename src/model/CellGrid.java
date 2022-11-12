@@ -14,27 +14,46 @@ public class CellGrid
 	{
 		// TODO Auto-generated constructor stub
 	}
-
+	
+	/**
+	 * Generate initial grid with default arrangement of cells
+	 * @param width
+	 * @param height
+	 */
 	public void generateGrid(int width, int height) 
 	{
 		// TODO Auto-generated method stub
 		
 	}
-
+	
+	/**
+	 * return all cells changed since last update
+	 * @return
+	 */
 	public Collection<AutomataCell> getChangedCells() 
 	{
 		// TODO Auto-generated method stub
 		return null;
 	}
-
+	
+	/**
+	 * Perform one iteration of cell logic on the board
+	 */
 	public void updateBoard() 
 	{
-		//update board using handler
+		//check for changes in board
 		/*
 		 * for each cell in the grid
 		 * that cell = handler.compareCellToNeighbors(cell, neighborCells[])
 		 * the handler applies rules and returns the state of the given cell
+		 * if the cell is changed store it for later
+		 * 
 		 */
 		
+		//update board with changes
+		/*
+		 * for each changed cell
+		 * set cellgrid at cell.getCoordinates = changed cell
+		 */
 	}
 }
