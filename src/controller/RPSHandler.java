@@ -1,11 +1,15 @@
 package controller;
 
-import model.AutomataCell;
 
-public class RPSHandler {
+import model.*;
 
-	public String compareCellToNeighbors(AutomataCell cell, AutomataCell[] neighbors) {
-		return "R";
+
+
+public class RPSHandler 
+{
+	public AutomataCell compareCellToNeighbors(AutomataCell curCell, AutomataCell[] neighborCells)
+	{
+		return curCell;
 	}
-	
+
 }

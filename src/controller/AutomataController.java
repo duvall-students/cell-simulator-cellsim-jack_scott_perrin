@@ -36,9 +36,7 @@ public class AutomataController
 		//create handler that will determine rules for the automata
 		RPSHandler handler = new RPSHandler();
 		cellGrid = new CellGrid(handler);
-	
-		automataView.generateInitialView();
-		
+
 		//initialize the automata step method to update
 		KeyFrame frame = new KeyFrame(Duration.millis(MILLISECOND_DELAY), e -> step(MILLISECOND_DELAY));
 		Timeline animation = new Timeline();
