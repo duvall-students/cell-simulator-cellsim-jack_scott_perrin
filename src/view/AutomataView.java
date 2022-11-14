@@ -86,6 +86,7 @@ public class AutomataView extends Application
 	// CREATE Width, Height, and initialize buttons 
 	public HBox setupButtons() {
 		HBox controls = new HBox();
+		
 		controls.setAlignment(Pos.BASELINE_CENTER);
 		controls.setSpacing(10);
 		
