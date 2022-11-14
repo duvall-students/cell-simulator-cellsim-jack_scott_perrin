@@ -1,5 +1,6 @@
 package controller;
 
+
 import model.*;
 
 
@@ -10,4 +11,5 @@ public class RPSHandler
 	{
 		return curCell;
 	}
+
 }
