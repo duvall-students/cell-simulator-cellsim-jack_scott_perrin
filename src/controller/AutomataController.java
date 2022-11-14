@@ -37,7 +37,7 @@ public class AutomataController
 		RPSHandler handler = new RPSHandler();
 		cellGrid = new CellGrid(handler);
 	
-		automataView.generateInitialView();
+		//automataView.generateInitialView();
 		
 		//initialize the automata step method to update
 		KeyFrame frame = new KeyFrame(Duration.millis(MILLISECOND_DELAY), e -> step(MILLISECOND_DELAY));
