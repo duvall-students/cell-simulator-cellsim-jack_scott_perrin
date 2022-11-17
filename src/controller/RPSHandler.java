@@ -1,6 +1,8 @@
 package controller;
 
 
+
+=======
 import static org.junit.Assert.assertEquals;
 
 import java.awt.Point;
@@ -20,7 +22,7 @@ public class RPSHandler
 		stateWinsVersus.put("R", "S");
 		stateWinsVersus.put("P", "R");
 		stateWinsVersus.put("S", "P");
-		
+
 	}
 	
 	public String compareCellToNeighbors(AutomataCell curCell, AutomataCell[] neighborCells)
@@ -58,6 +60,7 @@ public class RPSHandler
 	private boolean checkIfCellWins(String primaryCellState, String compareCellState)
 	{
 
+
 		if(stateWinsVersus.get(compareCellState).equals(primaryCellState))
 		{
 			return true;
@@ -67,6 +70,7 @@ public class RPSHandler
 			return false;
 		}
 	}
+
 	
 	//TEST CASES -- IGNORE
 	@Test
