@@ -1,15 +1,42 @@
 package controller;
 
 
-import model.*;
+import java.util.Hashtable;
 
-
+import model.AutomataCell;
 
 public class RPSHandler 
 {
-	public AutomataCell compareCellToNeighbors(AutomataCell curCell, AutomataCell[] neighborCells)
+	Hashtable<String, String> stateWinsVersus = new Hashtable<>();
+	Hashtable<String, String> stateLosesVersus = new Hashtable<>();
+	
+	public RPSHandler()
 	{
-		return curCell;
+		stateWinsVersus.put("R", "S");
+		stateWinsVersus.put("P", "R");
+		stateWinsVersus.put("S", "P");
+		
+		stateLosesVersus.put("R", "P");
+		stateLosesVersus.put("P", "S");
+		stateLosesVersus.put("S", "R");
 	}
+	
+	public String compareCellToNeighbors(AutomataCell curCell, AutomataCell[] neighborCells)
+	{
+		String curState = curCell.getState();
+		return null;
+	}
+	
+	private boolean checkIfCellWins(String primaryCellState, String compareCellState)
+	{
 
+		if(stateWinsVersus.get(primaryCellState).equals(compareCellState))
+		{
+			return true;
+		}
+		else
+		{
+			return false;
+		}
+	}
 }
