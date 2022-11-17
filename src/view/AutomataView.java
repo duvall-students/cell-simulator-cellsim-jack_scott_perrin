@@ -22,8 +22,8 @@ import javafx.util.converter.IntegerStringConverter;
 public class AutomataView extends Application
 {
 	// SET HEIGHT AND WIDTH PARAMETERS
-	public static final int grid_width = 400; 
-	public static final int grid_height = 400; 
+	public static final int grid_width = 700; 
+	public static final int grid_height = 500; 
 	
 	private static final int extra_horizontal = 100; 	// GUI area allowance when making the scene width
 	private static final int extra_vertical = 100; 	// GUI area allowance when making the scene width
@@ -99,13 +99,17 @@ public class AutomataView extends Application
 			for(int j =0; j < num_rows; j++){
 				Rectangle rect = new Rectangle(j*block_size, i*block_size, block_size, block_size);
 				//rect.setFill(color[mc.getCellState(new Point(i,j))]);
-				rect.setFill(Color.AQUA);
+				
+				//rect.setFill(Color.AQUA);
 				cellGrid[i][j] = rect;
+				
+				Point fillPoint = new Point(i, j);
+				colorCell(Color.SKYBLUE, fillPoint);
+				
 				drawing.getChildren().add(rect);
 			}	
 		}
 		return drawing;
-		
 	}
 	
 	// CREATE Width, Height, and initialize buttons 
@@ -130,7 +134,10 @@ public class AutomataView extends Application
 	{
 		//set cell at point in grid cellCoordinate to cellColor
 		
+		int x = cellCoordinate.x;
+		int y = cellCoordinate.y;
 		
+		cellGrid[x][y].setFill(cellColor);
 	}
 
 	/*
