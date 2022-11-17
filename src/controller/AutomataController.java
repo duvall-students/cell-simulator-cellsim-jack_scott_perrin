@@ -87,7 +87,7 @@ public class AutomataController
 	{
 		cellGrid.updateBoard();
 		
-		colorCells(cellGrid.getChangedCells());
+//		colorCells(cellGrid.getChangedCells());
 	}
 
 

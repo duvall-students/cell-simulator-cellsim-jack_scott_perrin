@@ -29,7 +29,10 @@ public class AutomataView extends Application
 	private final int EXTRA_HORIZONTAL = 150; 	// GUI area allowance when making the scene width
 	
 	private Scene myScene; 
+	
+	// Button Variables
 	private Button pauseButton;
+	private boolean paused = false;	
 	
 	AutomataController ac;
 	
@@ -103,13 +106,24 @@ public class AutomataView extends Application
 	public void colorCell(Color cellColor, Point cellCoordinate)
 	{
 		//set cell at point in grid cellCoordinate to cellColor
-	}
-
-	public void updatePauseButton(boolean paused) 
-	{
-		// change pause/play button text based on paused state
+		
 		
 	}
+
+	/*
+	 * Toggle the pause button
+	 */
+	public void updatePauseButton(boolean paused){
+		this.paused = !this.paused;
+		if(this.paused){
+			pauseButton.setText("Resume");
+		}
+		else{
+			pauseButton.setText("Pause");
+		}
+	}
+	
+	// public void setText - SIMPLIFIES UPDATEPAUSEBUTTON method - instead of 2 if statements
 	
 	public static void main(String args[]){ 	
 		  launch(args);
