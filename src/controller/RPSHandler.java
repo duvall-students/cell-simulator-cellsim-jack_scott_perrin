@@ -2,7 +2,7 @@ package controller;
 
 
 
-=======
+
 import static org.junit.Assert.assertEquals;
 
 import java.awt.Point;

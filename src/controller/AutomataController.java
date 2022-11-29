@@ -84,7 +84,6 @@ public class AutomataController
 	public void doOneStep(double timeElapsed)
 	{
 		cellGrid.updateBoard();
-		
 //		colorCells(cellGrid.getChangedCells());
 	}
 
