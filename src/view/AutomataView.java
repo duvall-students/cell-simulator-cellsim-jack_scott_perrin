@@ -56,12 +56,13 @@ public class AutomataView extends Application
 		primaryStage.show();
 		
 		ac.initialize();
-		generateInitialView();
+		//generateInitialView();
 	}
 	
 
 	private Scene generateInitialView()
 	{
+		System.out.println("test");
 		//Group mazeDrawing = setupMaze();
 		Group cellGrid = generateGridView(width, height);
 		HBox buttons = setupButtons();
@@ -74,7 +75,6 @@ public class AutomataView extends Application
 		root.getChildren().addAll(buttons, cellGrid);
 		
 		Scene scene = new Scene(root, grid_width, grid_height, Color.ANTIQUEWHITE);
-		
 		return scene; 
 		
 		//create initial view with empty grid container
@@ -125,8 +125,21 @@ public class AutomataView extends Application
 			ac.handlePause();
 		});
 		
-		controls.getChildren().add(pauseButton);
+		Button generateMazeButton = new Button("Generate Maze");
+		generateMazeButton.setOnAction(value ->  {
+			ac.generateNewAutomata();
+		});
 		
+		
+		 NumericTextField gridWidth = new NumericTextField();
+		 StringConverter<? extends Number> converter = new IntegerStringConverter();
+		 Bindings.bindBidirectional(gridWidth.textProperty(), ac.gridWidth, (StringConverter<Number>) converter);
+		 
+		 NumericTextField gridHeight = new NumericTextField();
+		 Bindings.bindBidirectional(gridHeight.textProperty(), ac.gridHeight, (StringConverter<Number>) converter);
+		 
+		 controls.getChildren().addAll(pauseButton, gridWidth, gridHeight, generateMazeButton);
+		 
 		return controls; 
 	}
 	
