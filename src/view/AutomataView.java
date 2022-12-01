@@ -120,7 +120,7 @@ public class AutomataView extends Application
 		controls.setSpacing(10);
 		
 		// CREATE PAUSE BUTTON (placeholder)
-		pauseButton = new Button("Pause");
+		pauseButton = new Button("Play");
 		pauseButton.setOnAction(value ->  {
 			ac.handlePause();
 		});
@@ -158,7 +158,7 @@ public class AutomataView extends Application
 	 */
 	public void updatePauseButton(boolean paused){
 		if(paused){
-			pauseButton.setText("Resume");
+			pauseButton.setText("Play");
 		}
 		else{
 			pauseButton.setText("Pause");
