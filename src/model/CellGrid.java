@@ -8,7 +8,7 @@ import controller.RPSHandler;
 import javafx.scene.control.Cell;
 
 public class CellGrid {
-	private final int THRESHOLD = 3;
+	public static final int THRESHOLD = 3;
 	
 	private RPSHandler rpsRules;
 	
