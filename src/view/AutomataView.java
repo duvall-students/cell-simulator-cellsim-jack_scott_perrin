@@ -104,7 +104,14 @@ public class AutomataView extends Application
 				cellGrid[i][j] = rect;
 				
 				Point fillPoint = new Point(i, j);
-				colorCell(Color.SKYBLUE, fillPoint);
+
+				
+				if (i % 2 == 0 && j % 2 == 0) {
+					colorCell(Color.SKYBLUE, fillPoint);
+				}
+				else {
+					colorCell(Color.WHITE, fillPoint);
+				}
 				
 				drawing.getChildren().add(rect);
 			}	
