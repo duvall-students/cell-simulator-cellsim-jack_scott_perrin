@@ -116,7 +116,13 @@ public class CellGrid {
 				}
 			}
 		}
-		return (AutomataCell[]) neighbors.toArray();
+		AutomataCell[] neighborsCell = new AutomataCell[neighbors.size()];
+		int i = 0;
+		for(AutomataCell c: neighbors) {
+			neighborsCell[i] = c;
+			i++;
+		}
+		return neighborsCell;
 	}
 	
 	
